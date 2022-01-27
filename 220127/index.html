@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        transition: transform ease-in-out 0.3s;
+      }
+      .center:hover {
+        transform: scale(1.2);
+      }
+      h1::before {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+      }
+      h1:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+      h1::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        inset: 0 0 0 0;
+        background: hsl(200 100% 80%);
+        z-index: -1;
+        transition: transform 0.3s ease;
+      }
+      h1 {
+        position: relative;
+      }
+      @media (orientation: landscape) {
+        body {
+          grid-auto-flow: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">자기소개서</h1>
+
+    <img
+      src="https://blog.kakaocdn.net/dn/ojq1W/btq0AFCcF8c/gHwY5zlE4o3kbvrpVKWVkk/img.png"
+      style="width: 120px; height: 120px; border-radius: 50%"
+      class="center"
+    />
+
+    <p
+      style="
+        border-radius: 3%;
+        background-color: white;
+        text-align: center;
+        opacity: 80%;
+      "
+    >
+      안녕하세요, 저는 코넬대학교에 재학중인 김나박이라고 합니다.
+    </p>
+    <div>
+      <p style="background-color: white; opacity: 80%; text-align: center">
+        저희 가족 구성원은 어머니, 아버지, 여동생 그리고 저 넷입니다.
+      </p>
+    </div>
+
+    <h1 style="text-align: center">학교 소개</h1>
+
+    <img
+      src="https://w.namu.la/s/091be9ccc893b832b8994661ca9440a9b2e68e79b2212446a39e8db03a2116d59174c4326218e5dc7f35c8ad3ba05cc9c166569083488848a9479c966660e9117ed2cfa3e009decca530c57036eeb2511edc7e6a159b45f7bfc3d0f2e8a7d302"
+      style="width: 120px; height: 120px"
+      class="center"
+    />
+    <p style="background-color: white; opacity: 80%">
+      아이비 리그 8개 대학 중 하나로, 미국을 대표하는 최상위권 명문대학 중
+      하나이다.그리고 미국에서 학부 대학 순위의 대명사인 U.S. News & World
+      Report 2021 National Universities Rankings에서 전국 18위를 기록했다. 또한,
+      미국에서 가장 많은 의사를 배출한 대학으로도 유명하다.
+    </p>
+    <iframe
+      width="100%"
+      height="315"
+      src="https://www.youtube.com/embed/GNIlYgx3oo8"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23546.164464835132!2d-76.4997589217462!3d42.46453406750593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d0821a6191da9d%3A0xf50ee64d821b9ff4!2z7L2U64SsIOuMgO2Vmeq1kA!5e0!3m2!1sko!2skr!4v1643278931183!5m2!1sko!2skr"
+      width="100%"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+    <h1 style="text-align: center">시간표</h1>
+    <table
+      style="
+        align-items: center;
+        background-color: white;
+        border-radius: 3%;
+        border: 1px solid brown;
+        width: 100%;
+      "
+    >
+      <tr>
+        <td>월</td>
+        <td>화</td>
+        <td>수</td>
+        <td>목</td>
+        <td>금</td>
+      </tr>
+      <tr>
+        <td>CS50</td>
+        <td>CS501</td>
+        <td>EN303</td>
+        <td>TN121</td>
+        <td>ENG101</td>
+      </tr>
+      <tr>
+        <td>CN402</td>
+        <td>SPA101</td>
+        <td>CS501</td>
+        <td>CS351</td>
+        <td>PE802</td>
+      </tr>
+      <tr>
+        <td>CS501</td>
+        <td>CS303</td>
+        <td>EN101</td>
+        <td>CS501</td>
+        <td>EN101</td>
+      </tr>
+      <tr>
+        <td>CS501</td>
+        <td>CS303</td>
+        <td>EN101</td>
+        <td>CS501</td>
+        <td>CS303</td>
+      </tr>
+    </table>
+  </body>
+</html>

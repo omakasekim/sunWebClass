@@ -1,41 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Document</title>
     <style>
-        #red{
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            background-color: red;
-            left: 0;
-            top: 100px;
-            visibility: visible;
-        }
+      #red {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background-color: red;
+        left: 0;
+        top: 100px;
+        visibility: visible;
+        opacity: 50%;
+      }
     </style>
-</head>
-<body>
-    <button id="up"></button>
-    <button id="down"></button>
-    <button id="left"></button>
-    <button id="right"></button>
+  </head>
+  <body>
+    <button id="up" onclick="up()">up</button>
+    <button id="down" onclick="down()">down</button>
+    <button id="left" onclick="left()">left</button>
+    <button id="right" onclick="right()">right</button>
+
     <button id="vis" onclick="visi()">Visible</button>
     <button id="hid" onclick="hidd()">Hidden</button>
     <button id="Dcolor" onclick="changeClr()">Change color</button>
-    <input type="text" id="userInput">
+    <input type="text" id="userInput" />
+    <button onclick="goCrazy()"></button>
     <div id="red"></div>
 
     <script>
-        function visi(){
-            document.getElementById('red').style.visibility = 'visible';
+      //up down bottom left << 이 줄 안적어도됨 Hello opacity, typing program
+      document.addEventListener("keypress", (event) => {
+        if (event.keyCode == "") {
+          left();
+        } else if (event.keyCode == "") {
+          up();
+        } else if (event.keyCode == "") {
+          right();
+        } else if (event.keyCode == "") {
+          down();
         }
-        function hidd(){
-            document.getElementById('red').style.visibility = 'hidden';
-        }
-        function changeClr(){
-            let curClr = document.getElementById('userInput').value;
-            document.getElementById('red').style.backgroundColor = curClr;
-        }
+      });
+
+      function up() {
+        document.getElementById("red").style.marginTop = "0px";
+      }
+      function down() {
+        document.getElementById("red").style.marginTop = "100px";
+      }
+      function left() {
+        document.getElementById("red").style.marginLeft = "0px";
+      }
+      function right() {
+        document.getElementById("red").style.marginLeft = "100px";
+      }
+
+      function visi() {
+        document.getElementById("red").style.visibility = "visible";
+      }
+      function hidd() {
+        document.getElementById("red").style.visibility = "hidden";
+      }
+      function changeClr() {
+        let curClr = document.getElementById("userInput").value;
+        document.getElementById("red").style.backgroundColor = curClr;
+      }
+      document.getElementById("red").addEventListener("mouseover", () => {
+        document.getElementById("red").style.opacity = "100%";
+      });
+      document.getElementById("red").addEventListener("mouseout", () => {
+        document.getElementById("red").style.opacity = "50%";
+      });
     </script>
-</body>
+  </body>
 </html>

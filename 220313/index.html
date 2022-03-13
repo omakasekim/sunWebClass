@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #red{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: red;
+            left: 0;
+            top: 100px;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <button id="up"></button>
+    <button id="down"></button>
+    <button id="left"></button>
+    <button id="right"></button>
+    <button id="vis" onclick="visi()">Visible</button>
+    <button id="hid" onclick="hidd()">Hidden</button>
+    <button id="Dcolor" onclick="changeClr()">Change color</button>
+    <input type="text" id="userInput">
+    <div id="red"></div>
+
+    <script>
+        function visi(){
+            document.getElementById('red').style.visibility = 'visible';
+        }
+        function hidd(){
+            document.getElementById('red').style.visibility = 'hidden';
+        }
+        function changeClr(){
+            let curClr = document.getElementById('userInput').value;
+            document.getElementById('red').style.backgroundColor = curClr;
+        }
+    </script>
+</body>
+</html>

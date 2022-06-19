@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <style>
+      body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+      }
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @media (orientation: landscape) {
+        body {
+          grid-auto-flow: column;
+        }
+      }
+      @keyframes drift {
+        from {
+          transform: rotate(0deg);
+        }
+        from {
+          transform: rotate(360deg);
+        }
+      }
+      
+      .center {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 10%;
+        bottom: 0;
+        right: 10;
+        opacity: 90%;
+        animation: drift 30000ms infinite linear;
+      }
+      .cover {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 58%;
+        bottom: 0;
+        right: 10;
+        opacity: 60%;
+        background-color: white;
+        width: 400px;
+        height: 400px;
+        border-radius: 2%;
+      }
+      .album {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0%;
+        bottom: 40%;
+        right: 0;
+      }
+      .music {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0%;
+        bottom: 0%;
+        right: 0;
+        text-align: center;
+        opacity: 100%;
+        font-family: Helvetica;
+      }
+      .player {
+        margin: auto;
+        position: absolute;
+        top: 30%;
+        left: 0%;
+        bottom: 0%;
+        right: 0;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <img
+      src="https://i.pinimg.com/originals/d3/03/96/d303960c44b99e5b86d361890a53cb9c.png"
+      style="width: 500px; height: 500px;"
+      class="center"
+    />
+
+    <div class="cover">
+
+      <img
+        src="<<album cover>>"
+        width="200px"
+        height="200px"
+        class="album"
+      />
+
+      <p class="music">창모 - METEOR</p>
+      <audio controls autoplay class="player">
+        <source src="<<music name>>.mp3">
+      </audio>
+
+    </div>
+
+  </body>
+</html>

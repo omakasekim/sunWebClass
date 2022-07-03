@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <style>
+      .inner {
+        width: 100vw;
+        float: left;
+      }
+      .inner img {
+        width: 100%;
+      }
+      .container {
+        width: 300vw;
+        transition: transform 0.5s;
+      }
+      .controller{
+        position: absolute;
+        left: 50%;
+        top: 137%;
+      }
+
+    </style>
+  </head>
+  <body style="margin: 0;">
+    <div style="overflow: hidden">
+      <div class="container">
+        <div class="inner">
+          <img
+            src="https://ntbrand-wp.s3.amazonaws.com/worldoftravel/wp-content/uploads/2021/03/31102028/My_World_Paris_59079f6834a4f50d46219cca.jpeg"
+          />
+        </div>
+        <div class="inner">
+          <img
+            src="https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg"
+          />
+        </div>
+        <div class="inner">
+          <img
+            src="https://a.cdn-hotels.com/gdcs/production143/d1528/7b73b3d4-623f-4bee-9cad-7ddf053a40c8.jpg"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="controller">
+    <button class="btn1">1</button>
+    <button class="btn2">2</button>
+    <button class="btn3">3</button>
+  </div>
+<script>
+</script>
+  </body>
+</html>

@@ -90,3 +90,30 @@
         } else {
           button.style.background = content;
         }
+        button.style.color = "white";
+        button.style.display = "inline-block";
+        button.style.textShadow =
+          "1px 0 black, 0 1px black, 1px 0 black, 0 -1px gray";
+        button.style.lineHeight = "40px";
+        button.style.textAlign = "center";  
+        button.style.width = "50px";
+        button.style.height = "50px";
+        button.style.borderRadius = "5px";
+        button.style.marginBottom = "10px"; 
+
+        button.onclick = () => {
+          ctx.strokeStyle = content;
+          lineColor = content;
+        };
+      });
+      document.querySelector(".clear").onclick = () => {
+        ctx.clearRect(0, 0, width, height);
+      };
+
+      document.querySelector(".fill").onclick = () => {
+        ctx.fillStyle = lineColor;
+        ctx.fillRect(0, 0, width, height);
+      };
+    </script>
+  </body>
+</html>

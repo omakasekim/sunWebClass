@@ -8,10 +8,11 @@
         position: relative;
         background: yellow;
       } 
-      #is {
+      #box {
         width: 100px;
         height: 100px;
         position: absolute;
+        background-color: red;
       }
     </style>
   </head>
@@ -20,13 +21,13 @@
     <button onclick="downOnce()">DW</button>
 
     <div class="container">
-      <img src="/bN.png" id="is">
+      <div id="box"></div>
     </div>
 
     <script>
       function diagOnce(){
         let id;
-        const elem = document.querySelector("#is");
+        const elem = document.querySelector("#box");
         let tpos = 100;
         let lpos = 0;
         clearInterval(id);
@@ -45,7 +46,7 @@
       }
       function downOnce(){
         let id;
-        const elem = document.querySelector("#is");
+        const elem = document.querySelector("#box");
         let pos = 0;
         clearInterval(id);
         id = setInterval(frame, 5);
@@ -61,7 +62,7 @@
       }
         function backwards() {
         let id;
-        const elem = document.querySelector("#is");
+        const elem = document.querySelector("#box");
         let pos = 300;
         clearInterval(id);
         id = setInterval(frame, 5);
@@ -77,7 +78,7 @@
       }
       function forward() {
         let id;
-        const elem = document.querySelector("#is");
+        const elem = document.querySelector("#box");
         let pos = 0;
         clearInterval(id);
         id = setInterval(frame, 5);
@@ -94,7 +95,7 @@
       }
       function diagSec(){
         let id;
-        const elem = document.querySelector("#is");
+        const elem = document.querySelector("#box");
         let tpos = 200;
         let lpos = 100;
         clearInterval(id);
@@ -113,7 +114,7 @@
       }
       function upOnce(){
         let id;
-        const elem = document.querySelector("#is");
+        const elem = document.querySelector("#box");
         let pos = 100;
         clearInterval(id);
         id = setInterval(frame, 5);

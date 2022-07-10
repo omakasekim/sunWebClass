@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: yellow;
+      } 
+      #is {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="forward()">Click me</button>
+    <button onclick="downOnce()">DW</button>
+
+    <div class="container">
+      <img src="/bN.png" id="is">
+    </div>
+
+    <script>
+      function diagOnce(){
+        let id;
+        const elem = document.querySelector("#is");
+        let tpos = 100;
+        let lpos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+          if (tpos == 200 && lpos == 100) {
+            clearInterval(id);
+          } else {
+            tpos++;
+            lpos++;
+            elem.style.top = tpos + "px";
+            elem.style.left = lpos + "px";
+          }
+        }
+      }
+      function downOnce(){
+        let id;
+        const elem = document.querySelector("#is");
+        let pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+          if (pos == 100) {
+            clearInterval(id);
+            diagOnce();
+          } else {
+            pos++;
+            elem.style.top = pos + "px";
+          }
+        }
+      }
+        function backwards() {
+        let id;
+        const elem = document.querySelector("#is");
+        let pos = 300;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+          if (pos == 0) {
+            clearInterval(id);
+          } else {
+            pos--;
+            elem.style.top = pos + "px";
+            elem.style.left = pos + "px";
+          }
+        }
+      }
+      function forward() {
+        let id;
+        const elem = document.querySelector("#is");
+        let pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+          if (pos == 300) {
+            clearInterval(id);
+            backwards();
+          } else {
+            pos++;
+            elem.style.top = pos + "px";
+            elem.style.left = pos + "px";
+          }
+        }
+      }
+      function knight(){
+        
+      }
+    </script>
+  </body>
+</html>

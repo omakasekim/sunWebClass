@@ -34,6 +34,7 @@
         function frame() {
           if (tpos == 200 && lpos == 100) {
             clearInterval(id);
+            diagSec();
           } else {
             tpos++;
             lpos++;
@@ -91,8 +92,39 @@
           }
         }
       }
-      function knight(){
-        
+      function diagSec(){
+        let id;
+        const elem = document.querySelector("#is");
+        let tpos = 200;
+        let lpos = 100;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+          if (tpos == 100 && lpos == 0) {
+            clearInterval(id);
+            upOnce();
+          } else {
+            tpos--;
+            lpos--;
+            elem.style.top = tpos + "px";
+            elem.style.left = lpos + "px";
+          }
+        }
+      }
+      function upOnce(){
+        let id;
+        const elem = document.querySelector("#is");
+        let pos = 100;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+          if (pos == 0) {
+            clearInterval(id);
+          } else {
+            pos--;
+            elem.style.top = pos + "px";
+          }
+        }
       }
     </script>
   </body>
